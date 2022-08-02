@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Enter a name and (optionally) a second name. Expect an -ovich at the end!" />
+      <Label text="First Name" />
+      <TextField id="firstName" promptText="Enter First Name" text="Example" />
+      <Label text="Last Name" />
+      <TextField id="lastName" promptText="Enter Last Name" text="Named" />
+      <CheckBox id="ilyaButton" mnemonicParsing="false" text="Add &quot;Ilya&quot; in the middle" />
+      <CheckBox id="setFirstAsLast" layoutX="10.0" layoutY="106.0" mnemonicParsing="false" text="Set last name as first name" />
+   </children>
+</VBox>
