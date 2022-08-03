@@ -13,7 +13,13 @@ public class Controller {
     @FXML
     private CheckBox doubleNameBox;
     @FXML
-    private TextField firstName;
+    private TextField firstNameField;
     @FXML
-    private TextField lastName;
+    private TextField lastNameField;
+
+    public void generateName() {}
+
+    public void greyOutLastName() {
+        lastNameField.setDisable(!lastNameField.isDisabled());
+    }
 }

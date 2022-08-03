@@ -10,11 +10,11 @@
    <children>
       <Label text="Enter a name and (optionally) a second name. Expect an -ovich at the end!" />
       <Label text="First Name" />
-      <TextField id="firstName" fx:id="firstName" promptText="Enter First Name" text="Example" />
+      <TextField id="firstName" fx:id="firstNameField" promptText="Enter First Name" text="Example" />
       <Label text="Last Name" />
-      <TextField id="lastName" fx:id="lastName" promptText="Enter Last Name" text="Named" />
+      <TextField id="lastName" fx:id="lastNameField" promptText="Enter Last Name" text="Named" />
       <CheckBox id="ilyaButton" fx:id="ilyaBox" mnemonicParsing="false" text="Add &quot;Ilya&quot; in the middle" />
-      <CheckBox id="setFirstAsLast" fx:id="doubleNameBox" layoutX="10.0" layoutY="106.0" mnemonicParsing="false" text="Set first name as last name" />
-      <Button fx:id="nameGenerationButton" mnemonicParsing="false" text="Confirm Selection" />
+      <CheckBox id="setFirstAsLast" fx:id="doubleNameBox" layoutX="10.0" layoutY="106.0" mnemonicParsing="false" onAction="#greyOutLastName" text="Set first name as last name" />
+      <Button fx:id="nameGenerationButton" mnemonicParsing="false" onAction="#generateName" text="Confirm Selection" />
    </children>
 </VBox>
