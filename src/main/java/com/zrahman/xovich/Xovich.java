@@ -13,7 +13,7 @@ public class Xovich extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/zrahman/xovich/view/XovichWindow.fxml"));
-        Scene scene = new Scene(root, 640, 480);
+        Scene scene = new Scene(root, 500, 325);
         stage.setScene(scene);
         stage.setTitle("Xovich Java Edition");
         stage.show();
