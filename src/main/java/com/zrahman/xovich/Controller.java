@@ -44,6 +44,8 @@ public class Controller {
             newName = "Ilya I Don't Got No Name";
         } else if (firstName.length() == 0 && ilyaBox.isSelected()) {
             newName = "Ilya " + lastName;
+        } else if (firstName.length() + lastName.length() == 0) {
+            newName = "I Don't Got No Name";
         } else if (firstName.length() == 0) {
             newName = lastName;
         } else if (lastName.length() == 0) {
