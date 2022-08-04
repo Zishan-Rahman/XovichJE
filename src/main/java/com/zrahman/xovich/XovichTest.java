@@ -1,3 +1,10 @@
 package com.zrahman.xovich;
 
-public class XovichTest {}
+import org.junit.Test;
+
+public class XovichTest {
+    @Test
+    public void testNoExceptionThrown() {
+        Main.main(new String[]{});
+    }
+}
