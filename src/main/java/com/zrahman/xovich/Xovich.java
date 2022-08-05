@@ -19,10 +19,10 @@ public class Xovich extends Application {
         stage.setScene(scene);
         stage.setTitle("Xovich Java Edition");
         stage.setOnCloseRequest(event -> {
-            Alert closeConfirmationDialog = new Alert(Alert.AlertType.WARNING, "Thanks for using Xovich Java Edition!", ButtonType.OK, ButtonType.CANCEL);
+            Alert closeConfirmationDialog = new Alert(Alert.AlertType.WARNING, "Thanks for using Xovich Java Edition!", ButtonType.YES, ButtonType.NO);
             closeConfirmationDialog.setTitle("End");
             closeConfirmationDialog.setHeaderText("Are you sure you want to exit?");
-            closeConfirmationDialog.showAndWait().filter(type -> type != ButtonType.OK).ifPresent(type -> event.consume());
+            closeConfirmationDialog.showAndWait().filter(type -> type != ButtonType.YES).ifPresent(type -> event.consume());
         });
         stage.show();
     }
