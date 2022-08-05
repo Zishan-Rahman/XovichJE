@@ -6,6 +6,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 public class Xovich extends Application {
@@ -16,6 +18,12 @@ public class Xovich extends Application {
         Scene scene = new Scene(root, 500, 325);
         stage.setScene(scene);
         stage.setTitle("Xovich Java Edition");
+        stage.setOnCloseRequest(event -> {
+            Alert closeConfirmationDialog = new Alert(Alert.AlertType.WARNING, "Thanks for using Xovich Java Edition!", ButtonType.OK, ButtonType.CANCEL);
+            closeConfirmationDialog.setTitle("End");
+            closeConfirmationDialog.setHeaderText("Are you sure you want to exit?");
+            closeConfirmationDialog.showAndWait().filter(type -> type != ButtonType.OK).ifPresent(type -> event.consume());
+        });
         stage.show();
     }
 
